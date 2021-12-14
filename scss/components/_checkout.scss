@@ -1,0 +1,51 @@
+@import "../base/variables";
+//Header
+.checkout-header {
+  background-color: grey;
+  width: 100%;
+  display: flex;
+  height: 80px;
+  h2 {
+    position: relative;
+    left: 42%;
+    padding-top: 20px;
+  }
+}
+
+//Body
+.checkout {
+  background-color: #f8f9fa;
+}
+
+.form-mio {
+  margin-bottom: 20px;
+  margin-top: 120px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-checkout {
+  @extend %flex;
+  div {
+    @extend %flex;
+    flex-direction: column;
+
+    ul {
+      text-align: center;
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      li {
+        margin: 15px;
+      }
+    }
+  }
+}
+
+#logo-checkout {
+  height: 70px;
+  padding-top: 10px;
+  transition: 0.5s linear;
+}

@@ -1,0 +1,21 @@
+@import "variables";
+@import "mixins";
+
+//Extends
+%links {
+  color: $colorFour;
+  font-size: $textSize;
+  text-decoration: none;
+  transition: all 0.5s;
+  font-weight: normal;
+}
+
+%ul {
+  display: flex;
+  list-style-type: none;
+}
+
+%flex {
+  display: flex;
+  justify-content: center;
+}

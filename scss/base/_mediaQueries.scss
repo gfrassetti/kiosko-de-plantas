@@ -1,0 +1,145 @@
+@import "variables";
+
+//Header
+@media only screen and (min-width: 576px) and (max-width: 1024px) {
+  .navbar-mio ul li a {
+    font-size: 0.938em;
+    margin: 5px;
+  }
+}
+
+@media only screen and(max-width: 575px) {
+  .navbar-mio ul li a {
+    font-size: 0.938em;
+    margin: 2px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .logo-banner {
+    width: 30%;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .logo-banner {
+    width: 40%;
+  }
+  #logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+//Body
+@media only screen and (max-width: 576px) {
+  .carousel-caption {
+    bottom: 330px;
+  }
+  .text-care {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #h1-title {
+    font-size: 2rem;
+  }
+}
+
+//Footer
+@media screen and (max-width: 480px) {
+  .logo-contact {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .email {
+    font-size: 80%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-text {
+    font-size: 0.938em;
+  }
+}
+
+@media screen and (min-width: 380px) and (max-width: 768px) {
+  .text-care {
+    font-size: 0.938em;
+    line-height: 20px;
+  }
+}
+@media screen and (max-width: 380px) {
+  .text-care {
+    font-size: 0.625em;
+    line-height: 15px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .care-img {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .title {
+    font-size: 1.563em;
+  }
+  .contact-text {
+    font-size: 0.938em;
+  }
+  .contact-icon {
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .media ul {
+    display: inline-grid;
+  }
+  .contact-icon {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .logo-contact {
+    width: 80px;
+    height: 80px;
+  }
+  .title {
+    font-size: $textSize;
+  }
+  .contact-text {
+    font-size: 0.625em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .me div p {
+    font-size: 0.938em;
+  }
+}
+
+//animaciones
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+  header.scroll #logo {
+    height: 60px;
+    width: 60px;
+    transition: 0.5s;
+    padding-bottom: 10px;
+  }
+  header.scroll {
+    height: 75px;
+    top: 0;
+  }
+}

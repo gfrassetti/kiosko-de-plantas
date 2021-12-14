@@ -1,0 +1,21 @@
+@mixin prefix($animation) {
+  -webkit-animation: $animation;
+  -o-animation: $animation;
+  -moz-animation: $animation;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -o-transform: $property;
+  -moz-transform: $property;
+}
+
+@mixin rgba($r, $g, $b, $a) {
+  background-color: rgba($r, $g, $b, $a);
+}
+
+@mixin transition($property) {
+  -webkit-transition: $property;
+  -moz-transition: $property;
+  -o-transition: $property;
+}

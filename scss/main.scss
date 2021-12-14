@@ -1,0 +1,29 @@
+@import "components/checkout";
+@import "components/header";
+@import "components/body";
+@import "components/footer";
+@import "base/variables";
+@import "base/animations";
+@import "base/mixins";
+@import "base/extends";
+@import "base/mediaQueries";
+
+/* Bootstrap overlap*/
+div {
+  overflow-x: hidden;
+}
+
+ul {
+  padding: 0;
+}
+
+//All
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: unset;
+}
+
+a {
+  text-decoration: none;
+}

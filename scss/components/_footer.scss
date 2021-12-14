@@ -1,0 +1,88 @@
+@import "../base/variables";
+@import "../base/extends";
+
+/* Footer  */
+/* Contacto  */
+footer {
+  background-color: $colorFour;
+  width: 100%;
+  nav {
+    display: flex;
+    justify-content: space-around;
+    #contact-logo {
+      @extend %flex;
+      flex-direction: column;
+      margin-left: 20px;
+    }
+    .media {
+      @extend %flex;
+      flex-direction: column;
+      ul {
+        @extend %ul;
+        justify-content: center;
+        li {
+          padding: 20px;
+        }
+      }
+    }
+  }
+  div {
+    iframe {
+      width: 100%;
+      margin-bottom: -5px;
+      filter: grayscale(100%);
+    }
+  }
+}
+
+.contact-text {
+  font-size: $textSize;
+}
+
+.logo-contact {
+  width: 100px;
+  height: 100px;
+}
+
+.contact-icon {
+  font-size: 30px;
+}
+
+.fab {
+  color: black;
+}
+
+.contact-column1 {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.me {
+  @extend %flex;
+  margin-top: 5px;
+  flex-direction: row;
+  padding-bottom: 10px;
+  div {
+    @extend %flex;
+    flex-direction: column;
+    p {
+      font-size: $textSize;
+    }
+  }
+}
+
+.github {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+#github-link {
+  padding-bottom: 10px;
+}
+
+#github-lottie {
+  margin-left: auto;
+  margin-right: auto;
+}

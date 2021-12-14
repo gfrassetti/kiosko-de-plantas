@@ -1,0 +1,58 @@
+@import "../base/variables";
+@import "../base/extends";
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  @include rgba(34, 40, 49, 0);
+  z-index: 100;
+  height: 100px;
+  transition: all 0.5s;
+}
+
+.my-bar {
+  width: 100vw;
+  position: absolute;
+  height: 5px;
+  top: 100%;
+  left: 0;
+}
+.ul-div {
+  text-align: left;
+}
+
+.navbar-mio {
+  display: flex;
+  align-items: normal;
+  justify-content: right;
+  margin-right: 20px;
+  transition: 0.5s;
+  width: min-content;
+  ul {
+    @extend %ul;
+    transition: 0.5s;
+    margin: 0;
+    padding: 0;
+    li {
+      a {
+        @extend %links;
+        margin: 10px;
+        text-shadow: 2px 2px 2px black;
+      }
+    }
+  }
+}
+
+.hamburger-btn {
+  justify-content: center !important;
+}
+
+.navbar-toggler {
+  border-color: transparent !important;
+}

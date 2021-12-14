@@ -1,0 +1,188 @@
+@import "variables";
+@import "../components/checkout";
+@import "mixins";
+/* index  */
+.navbar-mio nav ul li a:hover {
+  color: $colorThree;
+}
+
+.cares-item img:hover {
+  transition: all 1s;
+  transition: all 0.5s ease;
+  transform: rotateZ(-30deg);
+  @include transform(rotateZ(-30deg));
+}
+
+.scroll {
+  background: rgba(34, 40, 49, 1);
+  height: 80px;
+}
+
+header.srcoll .navbar-mio ul li a {
+  color: $colorThree;
+}
+
+#logo .scroll {
+  height: 50px;
+}
+.navbar-mio.scroll ul li a {
+  color: $colorFour;
+}
+
+header.scroll #logo {
+  height: 80px;
+  width: 80px;
+}
+
+header.scroll {
+  height: 100px;
+}
+
+header.scroll .navbar-mio ul li a {
+  color: $colorFour;
+}
+header.scroll .navbar-mio ul li a:hover {
+  color: $colorThree;
+}
+header.scroll .navbar-mio ul li a i:hover {
+  color: $colorThree;
+}
+
+header.scroll .logo-container {
+  padding-left: 20px;
+}
+header.scroll #logo-checkout {
+  padding-top: 15px;
+  width: 100%;
+  height: 80px;
+}
+
+header.scroll .navbar-mio {
+  padding: 10px 20px;
+}
+
+.media ul li a i:hover {
+  transform: translateY(-5px);
+  transition: all 0.5s ease;
+  @include transform(translateY(-5px));
+}
+
+.return-to-top i:hover {
+  transform: translateY(-6px);
+  @include transform(translateY(-6px));
+  transition: all 0.3s ease-out;
+  color: red;
+}
+.return-to-top:hover {
+  background: rgba(0, 173, 181, 0.8);
+}
+
+#cares-container {
+  background: linear-gradient(-130deg, #00adb5, #63b4b8, #17d7a0);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  @include prefix(gradient);
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.product-container:hover img {
+  transition: 0.5s ease;
+  opacity: 0.9;
+  filter: blur(3px);
+}
+
+.product-container:hover .middle {
+  opacity: 1;
+}
+
+/* Icon 1 */
+
+#nav-icon1 {
+  width: 35px;
+  height: 36px;
+  position: relative;
+  margin: 0px;
+  @include transform(rotate(0deg));
+  transform: rotate(0deg);
+  @include transition(0.5s ease-in-out);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: $colorFour;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  @include transform(rotate(0deg));
+  transform: rotate(0deg);
+  @include transition(0.5s ease-in-out);
+  transition: 0.5s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 10px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 20px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 18px;
+  @include transform(rotate(135deg));
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1:hover > .icon-bar:nth-child(2) {
+  width: 25px;
+  transition: ease all 0.2s;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  @include transform(rotate(-135deg));
+  transform: rotate(-135deg);
+}
+
+.contact-checkout {
+  div {
+    ul {
+      li {
+        a {
+          i {
+            &:hover {
+              @include transform(scale(1.1));
+              transform: scale(1.1);
+              transition: all 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
