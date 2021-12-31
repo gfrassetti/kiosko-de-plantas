@@ -9,7 +9,7 @@
     {
         "precio": 700,
         "id": 2,
-        "title": "Cuadro Vivo",
+        "title": "Cuadros Vivos",
         "img" : "../images/img/products/webp/700x700/1_002.webp"
         
     },
@@ -23,14 +23,14 @@
     {
         "precio": 400,
         "id": 4,
-        "title": "Maceta de vidrio",
+        "title": "Con Maceta de vidrio",
         "img" : "../images/img/products/webp/700x700/2_001.webp"
         
     },
     {
         "precio": 500,
         "id": 5,
-        "title": "Planta en maceta de lata",
+        "title": "Con maceta de lata",
         "img" : "../images/img/products/webp/700x700/1.webp"       
     },
     {
