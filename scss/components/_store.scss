@@ -1,0 +1,20 @@
+@import "../base/variables";
+@import "../base/extends";
+@import "../base/mixins";
+
+header {
+  li {
+    @extend %links;
+  }
+}
+#h1Store {
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  color: $colorThree;
+}
+
+#mainStore {
+  margin-top: 100px;
+  @include rgba(57, 62, 70, 1);
+}

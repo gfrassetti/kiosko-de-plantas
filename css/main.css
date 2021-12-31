@@ -42,7 +42,7 @@
   transition: 0.5s linear;
 }
 
-.navbar-mio ul li a {
+header li, .navbar-mio ul li a {
   color: #eeeeee;
   font-size: 1.25em;
   text-decoration: none;
@@ -349,7 +349,7 @@ body {
   list-style-type: none;
 }
 
-.navbar-mio ul li a {
+header li, .navbar-mio ul li a {
   color: #eeeeee;
   font-size: 1.25em;
   text-decoration: none;
@@ -444,6 +444,36 @@ footer div iframe {
 #github-lottie {
   margin-left: auto;
   margin-right: auto;
+}
+
+header li, .navbar-mio ul li a {
+  color: #eeeeee;
+  font-size: 1.25em;
+  text-decoration: none;
+  transition: all 0.5s;
+  font-weight: normal;
+}
+
+.navbar-mio ul, footer nav .media ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.contact-checkout, .contact-checkout div, #cares-container, .cart, footer nav #contact-logo, footer nav .media, .me, .me div {
+  display: flex;
+  justify-content: center;
+}
+
+#h1Store {
+  font-weight: 700;
+  font-size: 3rem;
+  text-align: center;
+  color: #00adb5;
+}
+
+#mainStore {
+  margin-top: 100px;
+  background-color: #393e46;
 }
 
 .checkout-header {
@@ -689,7 +719,7 @@ header.scroll .navbar-mio {
   transition: all 0.5s;
 }
 
-.navbar-mio ul li a {
+.navbar-mio ul li a, header li {
   color: #eeeeee;
   font-size: 1.25em;
   text-decoration: none;
