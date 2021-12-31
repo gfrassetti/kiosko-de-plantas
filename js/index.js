@@ -2,8 +2,10 @@ const cartBtn = document.getElementById("cart-btn");
 const cart = document.querySelector(".sidebar-container");
 const closeCart = document.getElementById("close-cart");
 
+$(window).on("scroll", scrollAnimation);
+
 //Hambuerguer animation
-$(document).ready(function () {
+$(document).ready(() => {
   $("#nav-icon1").on("click", function () {
     $(this).toggleClass("open");
   });
@@ -11,7 +13,6 @@ $(document).ready(function () {
 //Increase height of header on hamburger-nav
 function increaseHeader() {
   const header = document.querySelector("header");
-  const divNav = document.getElementById("navbarSupportedContent");
   if (header.className === "scroll") {
     header.style.height = "170px";
   }
@@ -19,27 +20,31 @@ function increaseHeader() {
     header.style.height = "unset";
   }
 }
+
 //Progressbar
 function progressBar() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height =
+  let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  let height =
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
+  let scrolled = (winScroll / height) * 100;
   document.querySelector(".my-bar").style.width = `${scrolled}%`;
 }
 
-cartBtn.onclick = () => {
-  console.log("click");
-  cart.classList.remove("hidden");
-};
+//Show cart
+function showCart() {
+  cartBtn.onclick = () => {
+    console.log("click");
+    cart.classList.remove("hidden");
+  };
 
-closeCart.onclick = () => {
-  cart.classList.add("hidden");
-};
+  closeCart.onclick = () => {
+    cart.classList.add("hidden");
+  };
+}
 
-//Scroll
-$(window).on("scroll", function () {
+//Scroll anim
+function scrollAnimation() {
   if ($(window).scrollTop() > 50) {
     $("header").addClass("scroll");
     $("#logo").attr("src", "images/img/logo/logo2white.png");
@@ -57,4 +62,6 @@ $(window).on("scroll", function () {
     $(".nav-newcolor").removeClass("navbar-dark");
     $(".nav-newcolor").addClass("navbar-light");
   }
-});
+}
+
+showCart();
