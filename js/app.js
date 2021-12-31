@@ -4,12 +4,15 @@ const fragment = document.createDocumentFragment();
 const addBtns = document.querySelectorAll(".add-btn");
 const shoppingCartitemContainer = document.querySelector(".cart-items");
 
+//fetch api al iniciar pagina
 document.addEventListener("DOMContentLoaded", () => {
   fetchData();
 });
 
+//capturar el item
 items.addEventListener("click", addToCart);
 
+//fecth
 const fetchData = async () => {
   try {
     const response = await fetch("../js/api.json");
@@ -22,6 +25,7 @@ const fetchData = async () => {
   }
 };
 
+//crea el template al fetchear
 function createItem(data) {
   data.forEach((item) => {
     console.log(item);
@@ -35,6 +39,7 @@ function createItem(data) {
   items.appendChild(fragment);
 }
 
+//añadir al carrito lo capturado del template fetcheado
 function addToCart(event) {
   const itemCaptured = event.target.closest(".item");
 
@@ -51,6 +56,7 @@ function addToCart(event) {
   }
 }
 
+//crear items del carrito
 function addItemToShoppingCart(itemTitle, itemPrice, itemImage) {
   const shoppingCartRow = document.createElement("div");
   const shoppingCartContent = `<article class="grid-items">
