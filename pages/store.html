@@ -64,38 +64,38 @@
     <div class="sidebar-container hidden">
       <div class="cart">
         <div class="cart-body">
-          <div class="cart-header">
-            <h4 class="title">Mi Carrito</h4>
-            <hr />
+          <div class="cart-head">
             <button
               type="button"
               class="btn-close"
               aria-label="close cart"
               id="close-cart"
             ></button>
+            <div>
+              <p>Detalle del Producto</p>
+            </div>
+            <div>
+              <p>Cantidad</p>
+            </div>
+            <div>
+              <p>Precio</p>
+            </div>
           </div>
-          <div>
-            <ul>
-              <li>1</li>
-              <li>2</li>
-              <li>3</li>
-            </ul>
+          <div class="cart-items">
+            <hr />
           </div>
-          <div class="cart-footer">
-            <button
-              type="button"
-              id="checkout-btn"
-              class="btn btn-outline-primary"
+          <button
+            type="button"
+            id="checkout-btn"
+            class="btn btn-outline-primary"
+          >
+            <a
+              href="../pages/checkout.html"
+              target="_blank"
+              style="color: white"
+              >Checkout</a
             >
-              <a
-                href="../pages/checkout.html"
-                target="_blank"
-                style="color: white"
-                >Checkout</a
-              >
-            </button>
-            <h4>Total: $ 0,00</h4>
-          </div>
+          </button>
         </div>
       </div>
     </div>
@@ -118,6 +118,16 @@
           ></a>
         </li>
       </div>
+      <section class="progress my-bar hidden">
+        <div
+          class="progress-bar bg-success"
+          role="progressbar"
+          style="width: 100%"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </section>
     </header>
     <!-- Store -->
     <main id="main-store">
@@ -128,15 +138,12 @@
           <div class="row" id="items">
             <template id="template-card">
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 item">
-                <img
-                  src="../images/img/products/webp/700x700/terrarrio1.webp"
-                  alt="producto"
-                />
+                <img src="" alt="producto" class="item-image" />
                 <br />
                 <h2 class="item-title"></h2>
-                <p></p>
+                <p class="item-price"></p>
                 <button class="add-btn">
-                  <span><i class="fas fa-seedling"></i>Agregar</span>
+                  <span class="icon-btn"><i class="fas fa-seedling"></i>Agregar</span>
                 </button>
                 <br />
               </div>

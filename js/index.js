@@ -45,7 +45,7 @@ function showCart() {
 
 //Scroll anim
 function scrollAnimation() {
-  if ($(window).scrollTop() > 50) {
+  if ($(window).scrollTop() > 25) {
     $("header").addClass("scroll");
     $("#logo").attr("src", "images/img/logo/logo2white.png");
     $(".return-to-top").removeClass("hidden");
