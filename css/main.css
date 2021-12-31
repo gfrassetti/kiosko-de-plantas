@@ -464,16 +464,37 @@ header li, .navbar-mio ul li a {
   justify-content: center;
 }
 
-#h1Store {
+#h1-store {
   font-weight: 700;
   font-size: 3rem;
   text-align: center;
   color: #00adb5;
 }
 
-#mainStore {
+#main-store {
   margin-top: 100px;
   background-color: #393e46;
+  text-align: center;
+}
+
+.add-btn {
+  border-radius: 40px;
+  border: 3px solid #00adb5;
+  background-color: #393e46;
+  color: white;
+  padding: 15px 40px;
+}
+
+.item {
+  color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.item img {
+  width: 75%;
+  object-fit: cover;
+  align-self: center;
 }
 
 .checkout-header {

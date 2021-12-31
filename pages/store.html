@@ -125,10 +125,37 @@
       </div>
     </header>
     <!-- Store -->
-    <main id="mainStore">
-      <h1 id="h1Store">Tienda</h1>
-      <section></section>
+    <main id="main-store">
+      <h1 id="h1-store">Tienda</h1>
+      <hr />
+      <section class="store">
+        <div class="container items">
+          <div class="row">
+            <div class="col item">
+              <template id="template-card">
+                <img
+                  src="../images/img/products/webp/700x700/terrarrio1.webp"
+                  alt="producto"
+                />
+                <h2>Producto</h2>
+                <p>$100</p>
+                <button class="add-btn">
+                  <span><i class="fas fa-seedling"></i>Agregar</span>
+                </button>
+              </template>
+            </div>
+            <div class="col item">Column</div>
+            <div class="col item">Column</div>
+          </div>
+          <div class="row">
+            <div class="col item">Column</div>
+            <div class="col item">Column</div>
+            <div class="col item">Column</div>
+          </div>
+        </div>
+      </section>
     </main>
+
     <!--Scripts-->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
@@ -150,5 +177,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="../js/index.js"></script>
+    <script src="../js/app.js"></script>
   </body>
 </html>
