@@ -91,4 +91,13 @@ function printItemsToCart() {
     fragment.appendChild(clone);
   });
   shoppingCartitemContainer.appendChild(fragment);
+
+  //es como un for pero simplificado
+
+  const nPrecio = Object.values(cartObject).reduce(
+    (acc, { quantity, price }) => acc + 150 + quantity * price,
+    0
+  );
+
+  document.getElementById("total-price").textContent = `$ ${nPrecio}`;
 }

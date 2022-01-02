@@ -73,3 +73,13 @@
   width: 5%;
 }
 
+.total,
+.extras {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.extras {
+  margin-top: 10px;
+}
