@@ -82,6 +82,29 @@
             </div>
           </div>
           <div class="cart-items">
+            <!-- Tempalte row carrito -->
+            <template id="template-row-cart">
+              <article class="grid-items">
+                <div class="prod">
+                  <img src="$" alt="" class="onCartImg" />
+                </div>
+                <div class="prod">
+                  <h3></h3>
+                </div>
+                <div class="prod">
+                  <div class="quantity">
+                    <span>-</span>
+                    <span class="span-quantity-item">1</span>
+                    <span>+</span>
+                  </div>
+                  <button class="remove">Quitar</button>
+                </div>
+                <div class="prod">
+                  <h3 class="h3-row-item-price"></h3>
+                </div>
+              </article>
+            </template>
+
             <hr />
           </div>
           <button
@@ -136,14 +159,20 @@
       <section class="store">
         <div class="container">
           <div class="row" id="items">
+            <!-- Template grid productos -->
             <template id="template-card">
               <div class="col-12 col-sm-6 col-md-4 col-lg-3 item">
                 <img src="" alt="producto" class="item-image" />
                 <br />
                 <h2 class="item-title"></h2>
-                <p class="item-price"></p>
+                <div class="d-flex justify-content-center">
+                  <span class="currency"></span>
+                  <p class="item-price"></p>
+                </div>
                 <button class="add-btn">
-                  <span class="icon-btn"><i class="fas fa-seedling"></i>Agregar</span>
+                  <span class="icon-btn"
+                    ><i class="fas fa-seedling"></i>Agregar</span
+                  >
                 </button>
                 <br />
               </div>

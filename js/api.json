@@ -1,5 +1,6 @@
 [
     {
+        "currency": "$",
         "precio": 600,
         "id": 1,
         "title": "Terrario de vidrio",
@@ -7,6 +8,7 @@
         
     },
     {
+        "currency": "$",
         "precio": 700,
         "id": 2,
         "title": "Cuadros Vivos",
@@ -14,6 +16,7 @@
         
     },
     {
+        "currency": "$",
         "precio": 200,
         "id": 3,
         "title": "Medidores de riego",
@@ -21,6 +24,7 @@
         
     },
     {
+        "currency": "$",
         "precio": 400,
         "id": 4,
         "title": "Con Maceta de vidrio",
@@ -28,12 +32,14 @@
         
     },
     {
+        "currency": "$",
         "precio": 500,
         "id": 5,
         "title": "Con maceta de lata",
         "img" : "../images/img/products/webp/700x700/1.webp"       
     },
     {
+        "currency": "$",
         "precio": 600,
         "id": 6,
         "title": "Cuadro",
