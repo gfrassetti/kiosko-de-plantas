@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cartObject = JSON.parse(localStorage.getItem("cartObject"));
     printItemsToCart();
   }
-});
+
 
 shoppingCartitemContainer.addEventListener("click", (event) => {
   addAndRemoveItem(event);
