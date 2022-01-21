@@ -2,15 +2,25 @@ const items = document.getElementById("items");
 const templateCard = document.getElementById("template-card").content;
 const templateRowCart = document.getElementById("template-row-cart").content;
 const fragment = document.createDocumentFragment();
-const addBtns = document.querySelectorAll(".add-btn");
+const cartNumberQuantityContainer = document.querySelector(".number-products");
+const spanQuantityCart = document.getElementById("spanQuantityCart");
 const shoppingCartitemContainer = document.querySelector(".cart-items");
+
 let cartObject = {};
 
 //fetch api al iniciar pagina
 document.addEventListener("DOMContentLoaded", () => {
   fetchData();
+  //llamar la local storage
+  if (localStorage.getItem("cartObject")) {
+    cartObject = JSON.parse(localStorage.getItem("cartObject"));
+    printItemsToCart();
+  }
 });
 
+shoppingCartitemContainer.addEventListener("click", (event) => {
+  addAndRemoveItem(event);
+});
 //capturar el item
 items.addEventListener("click", addToCart);
 
@@ -30,7 +40,6 @@ const fetchData = async () => {
 //crea el template al fetchear
 function createItem(data) {
   data.forEach((item) => {
-    console.log(item);
     templateCard.querySelector(".currency").textContent = item.currency;
     templateCard.querySelector("h2").textContent = item.title;
     templateCard.querySelector("img").src = item.img;
@@ -52,6 +61,7 @@ function addToCart(event) {
   ) {
     setCart(event.target.closest(".item"));
   }
+  event.stopPropagation();
 }
 
 const setCart = (object) => {
@@ -70,29 +80,30 @@ const setCart = (object) => {
   }
   //pushemos el obecto, copiamos product
   cartObject[product.id] = { ...product };
+
   printItemsToCart();
 };
 
-function printItemsToCart() {
+const printItemsToCart = () => {
   //empieza vacio para que no se dupliquen los que ya estan agregados
-  shoppingCartitemContainer.innerHTML = "";
+  shoppingCartitemContainer.innerHTML = ``;
   Object.values(cartObject).forEach((product) => {
     templateRowCart.querySelector("img").src = product.image;
     templateRowCart.querySelector("h3").textContent = product.title;
+    templateRowCart.querySelector(".remove-item").textContent = "-";
+    templateRowCart.querySelector(".remove-item").dataset.id = product.id;
+    templateRowCart.querySelector(".add-item").textContent = "+";
+    templateRowCart.querySelector(".add-item").dataset.id = product.id;
     templateRowCart.querySelector(".span-quantity-item").textContent =
       product.quantity;
-    console.log(product.quantity);
-    console.log(product.price);
     templateRowCart.querySelector(".h3-row-item-price").textContent =
-      product.price * product.quantity;
-    templateRowCart.querySelector(".remove").dataset.id = product.id;
+      "$ " + product.price * product.quantity;
+    templateRowCart.querySelector(".removeBtn").dataset.id = product.id;
 
     const clone = templateRowCart.cloneNode(true);
     fragment.appendChild(clone);
   });
   shoppingCartitemContainer.appendChild(fragment);
-
-  //es como un for pero simplificado
 
   const nPrecio = Object.values(cartObject).reduce(
     (acc, { quantity, price }) => acc + 150 + quantity * price,
@@ -100,4 +111,40 @@ function printItemsToCart() {
   );
 
   document.getElementById("total-price").textContent = `$ ${nPrecio}`;
-}
+  //guardar en local storage
+  localStorage.setItem("cartObject", JSON.stringify(cartObject));
+};
+
+const addAndRemoveItem = (event) => {
+  //boton sumar producto
+  if (event.target.classList.contains("add-item")) {
+    const product = cartObject[event.target.dataset.id];
+    console.log(product);
+    product.quantity++;
+    cartObject[event.target.dataset.id] = { ...product };
+    printItemsToCart();
+  }
+  //Boton restar producto
+  if (event.target.classList.contains("remove-item")) {
+    const product = cartObject[event.target.dataset.id];
+    product.quantity--;
+
+    if (product.quantity === 0) {
+      delete cartObject[event.target.dataset.id];
+    }
+    printItemsToCart();
+  }
+  event.stopPropagation();
+
+  //Eliminar item
+  if (event.target.classList.contains("removeBtn")) {
+    console.log(event.target);
+    const product = cartObject[event.target.dataset.id];
+    console.log(product);
+    product.quantity = 0;
+    if (product.quantity === 0) {
+      delete cartObject[event.target.dataset.id];
+    }
+    printItemsToCart();
+  }
+};

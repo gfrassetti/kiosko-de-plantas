@@ -39,6 +39,9 @@
   @include rgba(57, 62, 70, 1);
   color: white;
   padding: 15px 40px;
+  &:hover {
+    background-color: $colorThree;
+  }
 }
 
 .item {
@@ -82,4 +85,89 @@
 
 .extras {
   margin-top: 10px;
+}
+
+.bs-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+}
+
+.cart-head {
+  background-color: $colorTwo;
+  div {
+    p {
+      color: white;
+    }
+  }
+}
+
+.onCartImg {
+  width: 100%;
+  max-width: 75px;
+  border-radius: 20px;
+}
+
+.prod {
+  align-self: center;
+  margin: auto;
+  h3 {
+    font-size: $textSize;
+    text-align: center;
+  }
+}
+
+.removeBtn {
+  padding: 5px 20px;
+  @include rgba(238, 238, 238, 0.7);
+  border: 1px solid rgb(94, 94, 94);
+  color: black;
+  border-radius: 30px;
+  &:hover {
+    @include rgba(238, 238, 238, 0.2);
+  }
+}
+
+#cart-btn {
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+  i {
+    &:hover {
+      color: $colorOne;
+    }
+  }
+}
+
+.items {
+  ul {
+    list-style-type: none;
+  }
+}
+
+.remove-item,
+.add-item {
+  padding: 3px;
+  cursor: pointer;
+  &:hover {
+    @include rgba(238, 238, 238, 0.2);
+    border-radius: 30px;
+  }
+}
+
+.number-products {
+  background-color: #f50000;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  margin: -13px 10px;
+  span {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 8px;
+  }
 }

@@ -301,7 +301,7 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .visible {
@@ -351,39 +351,6 @@ body {
   display: flex;
   justify-content: space-around;
   padding: 15px 5%;
-}
-
-.onCartImg {
-  width: 100%;
-  max-width: 75px;
-  border-radius: 20px;
-}
-
-.prod {
-  align-self: center;
-  margin: auto;
-}
-.prod h3 {
-  font-size: 1.25em;
-  text-align: center;
-}
-
-.remove {
-  padding: 5px 20px;
-  background-color: rgba(238, 238, 238, 0.2);
-  border: 1px solid #5e5e5e;
-  color: black;
-  border-radius: 30px;
-}
-
-#cart-btn {
-  cursor: pointer;
-  color: white;
-  -webkit-appearance: unset;
-}
-
-.items ul {
-  list-style-type: none;
 }
 
 .navbar-mio ul li a {
@@ -540,6 +507,9 @@ footer div iframe {
   color: white;
   padding: 15px 40px;
 }
+.add-btn:hover {
+  background-color: #00adb5;
+}
 
 .item {
   color: #eeeeee;
@@ -582,6 +552,86 @@ footer div iframe {
 
 .extras {
   margin-top: 10px;
+}
+
+.bs-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+}
+
+.cart-head {
+  background-color: #393e46;
+}
+.cart-head div p {
+  color: white;
+}
+
+.onCartImg {
+  width: 100%;
+  max-width: 75px;
+  border-radius: 20px;
+}
+
+.prod {
+  align-self: center;
+  margin: auto;
+}
+.prod h3 {
+  font-size: 1.25em;
+  text-align: center;
+}
+
+.removeBtn {
+  padding: 5px 20px;
+  background-color: rgba(238, 238, 238, 0.7);
+  border: 1px solid #5e5e5e;
+  color: black;
+  border-radius: 30px;
+}
+.removeBtn:hover {
+  background-color: rgba(238, 238, 238, 0.2);
+}
+
+#cart-btn {
+  cursor: pointer;
+  color: white;
+  font-size: 25px;
+}
+#cart-btn i:hover {
+  color: #222831;
+}
+
+.items ul {
+  list-style-type: none;
+}
+
+.remove-item,
+.add-item {
+  padding: 3px;
+  cursor: pointer;
+}
+.remove-item:hover,
+.add-item:hover {
+  background-color: rgba(238, 238, 238, 0.2);
+  border-radius: 30px;
+}
+
+.number-products {
+  background-color: #f50000;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  margin: -13px 10px;
+}
+.number-products span {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+  font-weight: bold;
+  margin-left: 8px;
 }
 
 .checkout-header {
