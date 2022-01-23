@@ -313,7 +313,7 @@ body {
   position: fixed;
   flex-direction: row;
   right: 0;
-  width: 30vw;
+  width: 25vw;
   height: 100vh;
   background-color: #00adb5;
   transition: 0.5s all ease;
@@ -633,6 +633,10 @@ footer div iframe {
     margin-left: 8px;
   }
 } */
+.me-auto {
+  margin-left: 5px;
+}
+
 .checkout-header {
   background-color: grey;
   width: 100%;

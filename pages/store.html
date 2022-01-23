@@ -177,8 +177,8 @@
                   <span class="currency"></span>
                   <p class="item-price"></p>
                 </div>
-                <button class="add-btn">
-                  <span class="icon-btn"
+                <button class="add-btn liveToastBtn">
+                  <span class="icon-btn liveToastBtn"
                     ><i class="fas fa-seedling"></i>Agregar</span
                   >
                 </button>
@@ -188,7 +188,30 @@
           </div>
         </div>
       </section>
-      <aside class="bs-toast"></aside>
+      <aside class="bs-toast">
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+          <div
+            id="liveToast"
+            class="toast"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div class="toast-header">
+              <i class="fas fa-seedling"></i>
+              <strong class="me-auto"> Elemento agregado al carrito</strong>
+              <small>Recien</small>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="toast"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="toast-body"></div>
+          </div>
+        </div>
+      </aside>
       <br />
     </main>
     <footer id="contact" data-aos="fade-up">

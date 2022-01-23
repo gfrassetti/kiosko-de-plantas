@@ -27,7 +27,7 @@
         "currency": "$",
         "precio": 400,
         "id": 4,
-        "title": "Con Maceta de vidrio",
+        "title": "Planta en maceta de vidrio",
         "img" : "../images/img/products/webp/700x700/2_001.webp"
         
     },
@@ -35,7 +35,7 @@
         "currency": "$",
         "precio": 500,
         "id": 5,
-        "title": "Con maceta de lata",
+        "title": "Plata en maceta de lata",
         "img" : "../images/img/products/webp/700x700/1.webp"       
     },
     {

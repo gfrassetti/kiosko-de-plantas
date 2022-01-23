@@ -22,7 +22,9 @@ shoppingCartitemContainer.addEventListener("click", (event) => {
   addAndRemoveItem(event);
 });
 //capturar el item
-items.addEventListener("click", addToCart);
+items.addEventListener("click", (event) => {
+  addToCart(event);
+});
 
 //fecth
 const fetchData = async () => {
@@ -60,6 +62,10 @@ function addToCart(event) {
     event.target.classList.contains("icon-btn")
   ) {
     setCart(event.target.closest(".item"));
+    //Bs-toast
+    var toastLiveExample = document.getElementById("liveToast");
+    var toast = new bootstrap.Toast(toastLiveExample);
+    toast.show();
   }
   event.stopPropagation();
 }
@@ -80,6 +86,9 @@ const setCart = (object) => {
   }
   //pushemos el obecto, copiamos product
   cartObject[product.id] = { ...product };
+
+  const toastBody = document.querySelector(".toast-body");
+  toastBody.textContent = `${product.title}`; 
 
   printItemsToCart();
 };
