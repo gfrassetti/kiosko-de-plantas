@@ -297,7 +297,7 @@ body {
   width: 100%;
   /* height: 100vh; */
   position: fixed;
-  z-index: 9999;
+  z-index: 200;
 }
 
 .hidden {
@@ -635,6 +635,12 @@ footer div iframe {
 } */
 .me-auto {
   margin-left: 5px;
+}
+
+.toast,
+.bs-toast {
+  background-color: #00adb5;
+  z-index: 1000;
 }
 
 .checkout-header {

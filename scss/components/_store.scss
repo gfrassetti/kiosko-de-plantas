@@ -175,3 +175,9 @@
 .me-auto {
   margin-left: 5px;
 }
+
+.toast,
+.bs-toast {
+  background-color: $colorThree;
+  z-index: 1000;
+}

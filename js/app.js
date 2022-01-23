@@ -65,6 +65,8 @@ function addToCart(event) {
     //Bs-toast
     var toastLiveExample = document.getElementById("liveToast");
     var toast = new bootstrap.Toast(toastLiveExample);
+    document.querySelector(".me-auto").textContent =
+      " Elemento agregado al carrito";
     toast.show();
   }
   event.stopPropagation();
@@ -88,7 +90,7 @@ const setCart = (object) => {
   cartObject[product.id] = { ...product };
 
   const toastBody = document.querySelector(".toast-body");
-  toastBody.textContent = `${product.title}`; 
+  toastBody.textContent = `${product.title}`;
 
   printItemsToCart();
 };
@@ -136,7 +138,6 @@ const addAndRemoveItem = (event) => {
   if (event.target.classList.contains("remove-item")) {
     const product = cartObject[event.target.dataset.id];
     product.quantity--;
-
     if (product.quantity === 0) {
       delete cartObject[event.target.dataset.id];
     }
@@ -150,6 +151,15 @@ const addAndRemoveItem = (event) => {
     const product = cartObject[event.target.dataset.id];
     console.log(product);
     product.quantity = 0;
+    //Bs-toast
+    var toastLiveExample = document.getElementById("liveToast");
+    var toast = new bootstrap.Toast(toastLiveExample);
+    document.querySelector(".me-auto").textContent =
+      "Item eliminado del carrito";
+    const toastBody = document.querySelector(".toast-body");
+    toastBody.textContent = `${product.title}`;
+    toast.show();
+
     if (product.quantity === 0) {
       delete cartObject[event.target.dataset.id];
     }
