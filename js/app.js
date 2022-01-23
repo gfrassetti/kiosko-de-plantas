@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cartObject = JSON.parse(localStorage.getItem("cartObject"));
     printItemsToCart();
   }
-
+});
 
 shoppingCartitemContainer.addEventListener("click", (event) => {
   addAndRemoveItem(event);
@@ -116,7 +116,6 @@ const printItemsToCart = () => {
 };
 
 const addAndRemoveItem = (event) => {
-  //boton sumar producto
   if (event.target.classList.contains("add-item")) {
     const product = cartObject[event.target.dataset.id];
     console.log(product);

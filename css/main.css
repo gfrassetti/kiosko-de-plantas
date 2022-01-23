@@ -618,22 +618,21 @@ footer div iframe {
   border-radius: 30px;
 }
 
-.number-products {
+/* .number-products {
   background-color: #f50000;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   position: absolute;
   margin: -13px 10px;
-}
-.number-products span {
-  color: white;
-  font-size: 14px;
-  text-align: center;
-  font-weight: bold;
-  margin-left: 8px;
-}
-
+  span {
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: 8px;
+  }
+} */
 .checkout-header {
   background-color: grey;
   width: 100%;
