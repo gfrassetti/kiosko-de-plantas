@@ -99,19 +99,18 @@ const printItemsToCart = () => {
   //empieza vacio para que no se dupliquen los que ya estan agregados
   shoppingCartitemContainer.innerHTML = ``;
   Object.values(cartObject).forEach((product) => {
-    templateRowCart.querySelector("img").src = product.image;
-    templateRowCart.querySelector("h3").textContent = product.title;
-    templateRowCart.querySelector(".remove-item").textContent = "-";
-    templateRowCart.querySelector(".remove-item").dataset.id = product.id;
-    templateRowCart.querySelector(".add-item").textContent = "+";
-    templateRowCart.querySelector(".add-item").dataset.id = product.id;
-    templateRowCart.querySelector(".span-quantity-item").textContent =
-      product.quantity;
-    templateRowCart.querySelector(".h3-row-item-price").textContent =
-      "$ " + product.price * product.quantity;
-    templateRowCart.querySelector(".removeBtn").dataset.id = product.id;
-
     const clone = templateRowCart.cloneNode(true);
+    clone.querySelector("img").src = product.image;
+    clone.querySelector("h3").textContent = product.title;
+    clone.querySelector(".remove-item").textContent = "-";
+    clone.querySelector(".remove-item").dataset.id = product.id;
+    clone.querySelector(".add-item").textContent = "+";
+    clone.querySelector(".add-item").dataset.id = product.id;
+    clone.querySelector(".span-quantity-item").textContent = product.quantity;
+    clone.querySelector(".h3-row-item-price").textContent =
+      "$ " + product.price * product.quantity;
+    clone.querySelector(".removeBtn").dataset.id = product.id;
+
     fragment.appendChild(clone);
   });
   shoppingCartitemContainer.appendChild(fragment);
