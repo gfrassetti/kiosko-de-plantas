@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
 shoppingCartitemContainer.addEventListener("click", (event) => {
   addAndRemoveItem(event);
 });
