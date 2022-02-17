@@ -313,7 +313,7 @@ body {
   position: fixed;
   flex-direction: row;
   right: 0;
-  width: 25vw;
+  width: 25%;
   height: 100vh;
   background-color: #00adb5;
   transition: 0.5s all ease;
@@ -468,6 +468,10 @@ footer div iframe {
   justify-content: center;
 }
 
+h3 {
+  font-size: 1.25em;
+}
+
 .store-header {
   background-color: #00adb5;
   width: 100%;
@@ -540,12 +544,53 @@ footer div iframe {
 }
 
 .checkout-btn {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
   border-radius: 40px;
   border: 3px solid #00adb5;
   background-color: #393e46;
   color: white;
   padding: 15px 40px;
 }
+.checkout-btn:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #393e46;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.checkout-btn:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #17191c;
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.checkout-btn:hover {
+  color: #fff;
+}
+.checkout-btn:hover:before {
+  width: 100%;
+}
+
 .item {
   color: #eeeeee;
   display: flex;
@@ -614,11 +659,12 @@ footer div iframe {
   margin: auto;
 }
 .prod h3 {
-  font-size: 1.25em;
+  font-size: 0.938em;
   text-align: center;
 }
 
 .removeBtn {
+  max-width: fit-content;
   padding: 5px 20px;
   background-color: rgba(238, 238, 238, 0.7);
   border: 1px solid #5e5e5e;
@@ -953,6 +999,18 @@ header.scroll .navbar-mio {
     width: 50px;
     height: 50px;
   }
+
+  .cart {
+    width: 40%;
+  }
+
+  .prod h3 {
+    font-size: 0.75em;
+  }
+
+  .span-quantity-item {
+    font-size: 0.75em;
+  }
 }
 @media only screen and (max-width: 576px) {
   .carousel-caption {
@@ -999,6 +1057,17 @@ header.scroll .navbar-mio {
 @media only screen and (max-width: 1024px) {
   .care-img {
     width: 30%;
+  }
+
+  .cart-container {
+    margin-right: 10%;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .cart-container {
+    margin-right: 10%;
+    width: auto;
   }
 }
 @media screen and (min-width: 480px) and (max-width: 768px) {
