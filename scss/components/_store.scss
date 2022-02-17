@@ -14,7 +14,6 @@
       list-style-type: none;
       i {
         color: white;
-        font-size: $textSize;
       }
     }
   }
@@ -34,6 +33,40 @@
 }
 
 .add-btn {
+  text-align: center;
+  padding: 16px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+
+  &:after {
+    content: "+";
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: -30px;
+    transition: 0.5s ease-out;
+    color: $colorTwo;
+    font-weight: 800;
+    font-size: larger;
+  }
+
+  &:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+  }
+
+  &:hover:after {
+    opacity: 1;
+    right: 35px;
+  }
+
   border-radius: 40px;
   border: 3px solid #00adb5;
   @include rgba(57, 62, 70, 1);
@@ -41,6 +74,17 @@
   padding: 15px 40px;
   &:hover {
     background-color: $colorThree;
+  }
+}
+
+.checkout-btn {
+  border-radius: 40px;
+  border: 3px solid #00adb5;
+  @include rgba(57, 62, 70, 1);
+  color: white;
+  padding: 15px 40px;
+  &:hover{
+    
   }
 }
 
@@ -135,7 +179,7 @@
   font-size: 25px;
   i {
     &:hover {
-      color: $colorOne;
+      color: $colorFour;
     }
   }
 }
@@ -155,22 +199,6 @@
     border-radius: 30px;
   }
 }
-
-/* .number-products {
-  background-color: #f50000;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  position: absolute;
-  margin: -13px 10px;
-  span {
-    color: white;
-    font-size: 14px;
-    text-align: center;
-    font-weight: bold;
-    margin-left: 8px;
-  }
-} */
 
 .me-auto {
   margin-left: 5px;

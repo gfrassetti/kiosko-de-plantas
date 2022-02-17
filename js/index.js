@@ -43,6 +43,14 @@ function showCart() {
   };
 }
 
+function cartColor() {
+  if ($("header").hasClass("scroll")) {
+    $(".fa-cart-arrow-down").css("color", "#00adb5");
+  } else {
+    $(".fa-cart-arrow-down").css("color", "white");
+  }
+}
+
 //Scroll anim
 function scrollAnimation() {
   if ($(window).scrollTop() > 25) {
@@ -62,8 +70,7 @@ function scrollAnimation() {
     $(".nav-newcolor").removeClass("navbar-dark");
     $(".nav-newcolor").addClass("navbar-light");
   }
+  cartColor();
 }
 
 showCart();
-
-$
