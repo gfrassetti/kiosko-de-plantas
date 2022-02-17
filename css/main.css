@@ -543,7 +543,7 @@ h3 {
   background-color: #00adb5;
 }
 
-.checkout-btn {
+#checkout-btn {
   display: inline-block;
   padding: 0.75rem 1.25rem;
   border-radius: 10rem;
@@ -561,7 +561,7 @@ h3 {
   color: white;
   padding: 15px 40px;
 }
-.checkout-btn:after {
+#checkout-btn:after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -572,7 +572,7 @@ h3 {
   border-radius: 10rem;
   z-index: -2;
 }
-.checkout-btn:before {
+#checkout-btn:before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -584,10 +584,10 @@ h3 {
   border-radius: 10rem;
   z-index: -1;
 }
-.checkout-btn:hover {
+#checkout-btn:hover {
   color: #fff;
 }
-.checkout-btn:hover:before {
+#checkout-btn:hover:before {
   width: 100%;
 }
 
@@ -672,7 +672,7 @@ h3 {
   border-radius: 30px;
 }
 .removeBtn:hover {
-  background-color: rgba(238, 238, 238, 0.2);
+  background-color: rgba(245, 78, 78, 0.9);
 }
 
 #cart-btn {

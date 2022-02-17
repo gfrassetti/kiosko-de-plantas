@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-
 shoppingCartitemContainer.addEventListener("click", (event) => {
   addAndRemoveItem(event);
 });
@@ -74,7 +73,6 @@ function addToCart(event) {
 }
 
 const setCart = (object) => {
-  console.log(object);
   const product = {
     id: object.querySelector(".add-btn").dataset.id,
     title: object.querySelector("h2").textContent,
