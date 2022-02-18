@@ -46,8 +46,20 @@ function showCart() {
 function cartColor() {
   if ($("header").hasClass("scroll")) {
     $(".fa-cart-arrow-down").css("color", "#00adb5");
+    $(".fa-cart-arrow-down").on("mouseenter", function () {
+      $(this).css("color", "#eeeeee");
+    });
+    $(".fa-cart-arrow-down").on("mouseleave", function () {
+      $(this).css("color", "#00adb5");
+    });
   } else {
-    $(".fa-cart-arrow-down").css("color", "white");
+    $(".fa-cart-arrow-down").css("color", "#eeeeee");
+    $(".fa-cart-arrow-down").on("mouseenter", function () {
+      $(this).css("color", "#393e46");
+    });
+    $(".fa-cart-arrow-down").on("mouseleave", function () {
+      $(this).css("color", "#eeeeee");
+    });
   }
 }
 
